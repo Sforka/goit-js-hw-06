@@ -3,11 +3,12 @@ const createBtn = document.querySelector(`[data-create]`)
 const destroyBtn = document.querySelector(`[data-destroy]`)
 const boxes = document.querySelector(`#boxes`)
 
-const boxArray = []
+
 
 createBtn.addEventListener("click", onCreateBoxes)
 
 function onCreateBoxes() {
+  const boxArray = []
   for (let i = 1; i <= input.value; i++) {
     const box = document.createElement("div")
     box.classList.add("box")
