@@ -9,12 +9,14 @@ createBtn.addEventListener("click", onCreateBoxes)
 
 function onCreateBoxes() {
   for (let i = 1; i <= input.value; i++) {
-    const box = document.createElement('div');
+    const box = document.createElement("div")
     box.classList.add("box")
-    box.style.width = (20 + (i * 10)) + 'px';
-    box.style.height = (20 + (i * 10)) + "px"
-    box.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`
-    box.textContent = box.style.backgroundColor;
+    box.style.width = 20 + i * 10 + "px"
+    box.style.height = 20 + i * 10 + "px"
+    box.style.backgroundColor = `#${Math.floor(
+      Math.random() * 16777215
+    ).toString(16)}`
+    box.textContent = box.style.backgroundColor
     console.log(box)
     boxArray.push(box)
   }
@@ -27,6 +29,4 @@ function onDestroyBoxes() {
   while (boxes.firstChild) {
     boxes.removeChild(boxes.firstChild)
   }
-  
-  
 }
