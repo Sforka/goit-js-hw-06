@@ -1,9 +1,14 @@
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`
+}
+
+
 const input = document.querySelector(`[type="number"]`)
 const createBtn = document.querySelector(`[data-create]`)
 const destroyBtn = document.querySelector(`[data-destroy]`)
 const boxes = document.querySelector(`#boxes`)
-
-
 
 createBtn.addEventListener("click", onCreateBoxes)
 
@@ -14,10 +19,7 @@ function onCreateBoxes() {
     box.classList.add("box")
     box.style.width = 20 + i * 10 + "px"
     box.style.height = 20 + i * 10 + "px"
-    box.style.backgroundColor = `#${Math.floor(
-      Math.random() * 16777215
-    ).toString(16)}`
-    box.textContent = box.style.backgroundColor
+    box.style.backgroundColor = getRandomHexColor()
     console.log(box)
     boxArray.push(box)
   }

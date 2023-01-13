@@ -1,4 +1,5 @@
 const form = document.querySelector(".login-form")
+console.dir(form)
 
 form.addEventListener("submit", handleSubmit)
 
@@ -12,6 +13,8 @@ function handleSubmit(event) {
     return alert("Please fill in all the fields!")
   }
 
-  console.log(`Login: ${email.value}, Password: ${password.value}`)
+  console.log(
+    `${email.name}: ${email.value}, ${password.name}: ${password.value}`
+  )
   event.currentTarget.reset()
 }

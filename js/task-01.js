@@ -9,7 +9,7 @@ const itemEl = document.querySelectorAll(`li.item`)
 
 itemEl.forEach((element, index) => {
   console.log("Category: " + element.firstElementChild.textContent)
-  console.log("Elements: " + element.querySelectorAll(`li`).length)
+  console.log("Elements: " + element.lastElementChild.children.length)
 })
 
 // document.querySelectorAll(`li.item`).forEach((element, index) => {
