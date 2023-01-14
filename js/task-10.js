@@ -29,7 +29,6 @@ function onCreateBoxes() {
 destroyBtn.addEventListener("click", onDestroyBoxes)
 
 function onDestroyBoxes() {
-  while (boxes.firstChild) {
-    boxes.removeChild(boxes.firstChild)
-  }
+  boxes.innerHTML = "";
+  input.value = ""
 }

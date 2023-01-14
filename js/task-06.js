@@ -1,16 +1,16 @@
 const validationInput = document.querySelector("#validation-input")
+console.log(validationInput.dataset.length)
 
-
+validationInput.addEventListener("blur", onValidationCheked)  
 
 function onValidationCheked() {
-  if (validationInput.value.length >= validationInput.dataset.length) {
-    validationInput.classList.add("valid")
+  if (validationInput.value.length === validationInput.dataset.length) {
     validationInput.classList.remove("invalid")
-  }
-  else {
+    validationInput.classList.add("valid")
+  } else {
     validationInput.classList.remove("valid")
     validationInput.classList.add("invalid")
   }
+  console.log(validationInput.value.length)
 }
 
-validationInput.addEventListener("blur", onValidationCheked)
