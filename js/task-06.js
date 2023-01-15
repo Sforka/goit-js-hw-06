@@ -4,7 +4,7 @@ console.log(validationInput.dataset.length)
 validationInput.addEventListener("blur", onValidationCheked)  
 
 function onValidationCheked() {
-  if (validationInput.value.length === validationInput.dataset.length) {
+  if (validationInput.value.length === Number(validationInput.dataset.length)) {
     validationInput.classList.remove("invalid")
     validationInput.classList.add("valid")
   } else {
